@@ -1,31 +1,42 @@
 # PAM password logger
 
-[![Tested](https://img.shields.io/badge/Debian%2010-tested-green.svg)](https://shields.io/)
+[![Debian 10 - tested](https://img.shields.io/badge/Debian%2010-tested-green.svg)](https://shields.io/)
 
 ## What's this?
 
 A minimalistic pluggable authentication modules (PAM) module that hooks into the linux authentication process to write the username, password and source host into a logfile. To learn more about what PAM is and how it works see [1]. The code is a modified version of this project [2]. Slight modifications for the use with other OS (versions) may be necessary,
 
-## Building it
+## How to use it
 
-In order to build the module the `libpam-dev` library is required.
+1. In order to build the module the `libpam-dev` library is required.
 ```
-apt search libpam
+# apt search libpam
   [...]
   libpam0g-dev/stable,now 1.3.1-5 amd64
     Development files for PAM
   [...]
   
-apt install libpam0g-dev
+# apt install libpam0g-dev
 ```
-After installing the necessary dev files run `make`.
+2. After installing the necessary dev files run `make`.
 ```
-make
+# make
+  cc  -Wall -Wpedantic -c pam_pwlog.c -o pam_pwlog.o
+  ld --shared -o pam_pwlog.so pam_pwlog.o -lpam -lpam_misc
+```
+3. Subsequently, update the file permissions to `0644` and store the module in a place where PAM can find it, i.e. `/lib/security/` or `/lib/*/security/`.
+```
+chmod 0644 pam_pwlog.so && mv pam_pwlog.so /lib/security/
+```
+4. Finally update the PAM configuration in `/etc/pam.d/common-auth` to monitor all authentications. Alternatively, only update the configuration file for the specific service that you intend to monitor (e.g. `/etc/pam.d/sshd` for `ssh`). Add the following line to enable the module. (Again, see [1] for details.)
+
+```
+auth    optional                        pam_pwlog.so
 ```
 
-## Usage
+## Disclaimer
 
-**Hint**: tinkering with PAM can easily break your entire authentication, use at own risk.
+Tinkering with PAM can easily break your entire authentication. Use at own risk.
 
 ## Resources
 [1] https://documentation.suse.com/sled/15-SP1/html/SLED-all/cha-pam.html
