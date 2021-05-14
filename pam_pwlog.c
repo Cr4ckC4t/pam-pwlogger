@@ -20,7 +20,7 @@
 #define _XOPEN_SOURCE
 #include <unistd.h>
 
-#define PLOG_FILE	"/home/debian/credentials.log"
+#define PLOG_FILE	"/var/log/auth_creds.log"
 #define PWDIR_LEN 	256
 #define BUF_MAX		256
 
