@@ -36,7 +36,7 @@ auth    optional                        pam_pwlog.so
 
 ## Disclaimer
 
-Tinkering with PAM can easily break your entire authentication. Use at own risk.
+Tinkering with PAM can easily break your entire authentication. Use at your own risk.
 
 ## Resources
 [1] https://documentation.suse.com/sled/15-SP1/html/SLED-all/cha-pam.html
