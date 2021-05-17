@@ -5,7 +5,7 @@
 
 ## What's this?
 
-A minimalistic pluggable authentication modules (PAM) module that hooks into the linux authentication process to write the username, password and source host into a logfile. To learn more about what PAM is and how it works see [1]. The code is a modified version of this project [2]. Slight modifications for the use with other OS (versions) may be necessary,
+A minimalistic pluggable authentication modules (PAM) module that hooks into the linux authentication process to write the username, password and source host into a logfile. To learn more about what PAM is and how it works see [1]. The code is a modified version of this project [2]. Slight modifications for the use with other OS (versions) may be necessary.
 
 ## How to use it
 
