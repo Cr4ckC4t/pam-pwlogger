@@ -27,7 +27,7 @@ A minimalistic pluggable authentication modules (PAM) module that hooks into the
 ```
 3. Subsequently, update the file permissions to `0644` and store the module in a place where PAM can find it, i.e. `/lib/security/` or `/lib/*/security/`.
 ```
-chmod 0644 pam_pwlog.so && mv pam_pwlog.so /lib/security/
+# chmod 0644 pam_pwlog.so && mv pam_pwlog.so /lib/security/
 ```
 4. Finally update the PAM configuration in `/etc/pam.d/common-auth` to monitor all authentications. Alternatively, only update the configuration file for the specific service that you intend to monitor (e.g. `/etc/pam.d/sshd` for `ssh`). Add the following line to enable the module. (Again, see [1] for details.)
 
