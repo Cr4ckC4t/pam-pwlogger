@@ -2,6 +2,7 @@
 
 [![Debian 10 - tested](https://img.shields.io/badge/Debian%2010-tested-green.svg)](https://shields.io/)
 [![Ubuntu 2020.4 - tested](https://img.shields.io/badge/Ubuntu%202020.4-tested-green.svg)](https://shields.io/)
+[![CentOS](https://img.shields.io/badge/CentOS-logs%20wrong%20passwords-red.svg)](https://shields.io/)
 
 ## What's this?
 
