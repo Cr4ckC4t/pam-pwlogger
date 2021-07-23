@@ -2,13 +2,15 @@
 
 [![Debian 10 - tested](https://img.shields.io/badge/Debian%2010-tested-green.svg)](https://shields.io/)
 [![Ubuntu 2020.4 - tested](https://img.shields.io/badge/Ubuntu%202020.4-tested-green.svg)](https://shields.io/)
-[![CentOS](https://img.shields.io/badge/CentOS-logs%20wrong%20passwords-red.svg)](https://shields.io/)
+[![CentOS](https://img.shields.io/badge/CentOS-tested-green.svg)](https://shields.io/)
 
 ## What's this?
 
 A minimalistic pluggable authentication modules (PAM) module that hooks into the linux authentication process to write the username, password and source host into a logfile. To learn more about what PAM is and how it works see [1]. The code is a modified version of this project [2]. Slight modifications for the use with other OS (versions) may be necessary.
 
 ## How to use it
+
+> The instructions are for Debian / Ubuntu. This also works on CentOS but requires some modifications, see my answere [HERE](https://github.com/Cr4ckC4t/pam-pwlogger/issues/1).
 
 1. In order to build the module the `libpam-dev` library is required.
 ```
