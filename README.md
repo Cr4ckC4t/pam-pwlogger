@@ -10,7 +10,7 @@ A minimalistic pluggable authentication modules (PAM) module that hooks into the
 
 ## How to use it
 
-> The instructions are for Debian / Ubuntu. This also works on CentOS but requires some modifications, see my answere [HERE](https://github.com/Cr4ckC4t/pam-pwlogger/issues/1).
+> The instructions are for Debian / Ubuntu. This also works on CentOS but requires some modifications, see my answer [HERE](https://github.com/Cr4ckC4t/pam-pwlogger/issues/1).
 
 1. In order to build the module the `libpam-dev` library is required.
 ```
